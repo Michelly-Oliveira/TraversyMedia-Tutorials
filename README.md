@@ -1,2 +1,1 @@
-# TraversyMedia-Tutorials
-TraversyMedia youtube tutorials
+# Tutorials
