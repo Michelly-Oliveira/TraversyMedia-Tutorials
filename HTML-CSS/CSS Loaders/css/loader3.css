@@ -1,0 +1,38 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Apply style to all spans inside the loader */
+.loader > span {
+  display: inline-block;
+  background: purple;
+  /* YOu need to set width and height when display is set to inline-block */
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  margin: 8px;
+  /* animation for size and jump */
+  transform: translate3d(0);
+  /* alternate = go forward-backward and backward-forward */
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader > span:nth-child(2) {
+  background: palevioletred;
+  animation-delay: 0.2s;
+}
+
+.loader > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    width: 16px;
+    height: 16px;
+    /* x:0, y:-16px, go up, z:0 */
+    transform: translate3d(0, -16px, 0);
+  }
+}

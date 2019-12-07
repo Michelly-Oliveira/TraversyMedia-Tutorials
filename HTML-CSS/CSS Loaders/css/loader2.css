@@ -1,0 +1,24 @@
+.loader {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 40px;
+  color: palevioletred;
+}
+
+/* Add the 3 dots */
+.loader::after {
+  /* Use the ASCII code to add three dots */
+  content: '\2026';
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* Change the width for the animation */
+  width: 0;
+  animation: dots steps(4, end) 2s infinite;
+}
+
+@keyframes dots {
+  /* Increase the width of the dots container to make them appear on the screen*/
+  to {
+    width: 1.25em;
+  }
+}
